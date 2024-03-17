@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .error {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/predict" method="post">
+      <label for="employee_id">Employee ID</label>
+      <input
+        type="text"
+        id="employee_id"
+        name="employee_id"
+        required
+      /><br /><br />
+
+      <label for="department">Department</label>
+      <select id="department" name="department" required>
+        <option value="Technology">Technology</option>
+        <option value="HR">HR</option>
+        <option value="Sales & Marketing">Sales & Marketing</option>
+        <option value="Procurement">Procurement</option>
+        <option value="Finance">Finance</option>
+        <option value="Analytics">Analytics</option>
+        <option value="Operations">Operations</option>
+        <option value="Legal">Legal</option>
+        <option value="R&D">R&D</option></select
+      ><br /><br />
+
+      <label for="region">Region</label>
+      <select id="region" name="region" required>
+        <option value="region_1">region_1</option>
+        <option value="region_2">region_2</option>
+        <option value="region_3">region_3</option>
+        <option value="region_4">region_4</option>
+        <option value="region_5">region_5</option>
+        <option value="region_6">region_6</option>
+        <option value="region_7">region_7</option>
+        <option value="region_8">region_8</option>
+        <option value="region_9">region_9</option>
+        <option value="region_10">region_10</option>
+        <option value="region_11">region_11</option>
+        <option value="region_12">region_12</option>
+        <option value="region_13">region_13</option>
+        <option value="region_14">region_14</option>
+        <option value="region_15">region_15</option>
+        <option value="region_16">region_16</option>
+        <option value="region_17">region_17</option>
+        <option value="region_18">region_18</option>
+        <option value="region_19">region_19</option>
+        <option value="region_20">region_20</option>
+        <option value="region_21">region_21</option>
+        <option value="region_22">region_22</option>
+        <option value="region_23">region_23</option>
+        <option value="region_24">region_24</option>
+        <option value="region_25">region_25</option>
+        <option value="region_26">region_26</option>
+        <option value="region_27">region_27</option>
+        <option value="region_28">region_28</option>
+        <option value="region_29">region_29</option>
+        <option value="region_30">region_30</option>
+        <option value="region_31">region_31</option>
+        <option value="region_32">region_32</option>
+        <option value="region_33">region_33</option>
+        <option value="region_34">region_34</option>
+      </select>
+      <br /><br />
+
+      <label for="education">Education</label>
+      <select id="education" name="education" required>
+        <option value="Below Secondary">Below Secondary</option>
+        <option value="Bachelors">Bachelors</option>
+        <option value="Masters & above">Masters & above</option>
+      </select>
+      <br /><br />
+
+      <label for="gender"> Gender </label>
+      <select id="gender" name="gender" required>
+        <option value="m">Male</option>
+        <option value="f">Female</option>
+      </select>
+      <br /><br />
+
+      <label for="recruitment_channel">Recruitment Channel</label>
+      <select id="recruitment_channel" name="recruitment_channel" required>
+        <option value="sourcing">Sourcing</option>
+        <option value="referred">Referred</option>
+        <option value="other">Other</option>
+      </select>
+      <br /><br />
+
+      <label for="no_of_trainings">No of Trainings (0-9)</label>
+      <input
+        type="number"
+        id="no_of_trainings"
+        name="no_of_trainings"
+        required
+      /><br /><br />
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" required /><br /><br />
+
+      <label for="previous_year_rating">Previous Year Rating (1-5)</label>
+      <input
+        type="number"
+        id="previous_year_rating"
+        name="previous_year_rating"
+        required
+      /><br /><br />
+
+      <label for="length_of_service">Length of Service</label>
+      <input
+        type="number"
+        id="length_of_service"
+        name="length_of_service"
+        required
+      /><br /><br />
+
+      <label for="KPIs_met >80%">KPIs met >80%</label>
+      <select id="KPIs_met_more_than_80" name="KPIs_met_more_than_80" required>
+        <option value="1">Yes</option>
+        <option value="2">No</option>
+      </select>
+      <br /><br />
+
+      <label for="awards_won">Award won</label>
+      <select id="awards_won" name="awards_won" required>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+      <br /><br />
+
+      <button type="submit">Submit</button>
+      <p>{{prediction}}</p>
+    </form>
+  </body>
+</html>

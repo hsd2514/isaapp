@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Result Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      #result {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+      }
+
+      #result span {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      #result-text {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+
+      #result-value {
+        color: #f00;
+      }
+
+        ._prediction {
+            color: green;
+            border: 1px solid black;
+            width: 30%;
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Result Page</h1>
+
+    <div id="result">
+      <span>Employee ID: {{employee_id}}</span><br />
+      <span>Department: {{department}}</span><br />
+      <span>Region: {{region}}</span><br />
+      <span>Education: {{education}}</span><br />
+      <span>Gender: {{gender}}</span><br />
+      <span>Recruitment Channel: {{recruitment_channel}}</span><br />
+      <span>No. of Trainings: {{no_of_trainings}}</span><br />
+      <span>Age: {{age}}</span><br />
+      <span>Previous Year Rating: {{previous_year_rating}}</span><br />
+      <span>Length of Service: {{length_of_service}}</span><br />
+      <span>KPIs Met More Than 80% (1 : for true 0 : for false ) : {{KPIs_met_more_than_80}} </span><br />
+      <span>Awards Won: {{awards_won}}</span><br />
+      <hr>
+      <center>
+      <span class="_prediction"><h3><b><i>Prediction: {{prediction}}</b></i></h3></span><br />
+      </center>  
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
